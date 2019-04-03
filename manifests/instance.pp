@@ -32,8 +32,8 @@ define tor::instance (
   if $name == 'default' {
     $config_dir = $::tor::config_dir
     $config_file = "${config_dir}/torrc"
-    $config_file_owner = 'tor'
-    $config_file_group = 'tor'
+    $config_file_owner = 'debian-tor'
+    $config_file_group = 'debian-tor'
   }
   else {
     $config_dir = "${::tor::instances_config_dir}/${name}"
